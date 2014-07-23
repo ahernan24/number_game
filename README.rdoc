@@ -1,0 +1,14 @@
+== README
+
+This app is a number guessing game. It is a simple app where you can play to try to guess the correct number. 
+
+If you would like to run the number guessing app please do the following:
+
+- Get on terminal 
+- Find the number_game folder
+- Once you're in the number_game folder, start the Rails server. (type in: Rails server or Rails s)
+- You can stick with the path being on localhost:3000 or chose any other port.
+- Once things are up and running feel free to look at the code, modify or interact with the application.
+
+- end				                          
+
