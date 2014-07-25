@@ -1,0 +1,19 @@
+<h1> Guessing Numbers! </h1>
+<h2> New Game </h2>
+
+<a href ="/games">All Games</a></li>
+
+<%= form_for :game, url: games_path do |f| %>
+	<p>
+		<%= f.label :Guess_number_between_1_and_10 %>
+		<%= f.text_field :guess_count %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+	
+<% end %>
+
+
+
