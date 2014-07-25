@@ -1,9 +1,26 @@
 class GamesController < ApplicationController
-  def index
+  def new
     @game = Game.new  
   end
   
-  def new 
+  def create
+    @game = Game.new(game_params)
   
+    @game.save
+    redirect_to @game  
   end
+  
+  def index
+    @games = Game.all
+  end 
+
+  def show
+    @game = Game.find(params[:id])
+  end
+  
+ private 
+  def game_params
+    params.require(:game).permit(:answer, :guess_count)
+  end
+  
 end
