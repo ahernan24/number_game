@@ -1,7 +1,15 @@
 <h1> Guessing Numbers! </h1>
+<h2> All Games </h2>
+<a href ="/games/new">New game</a></li>
 
-<p> Type in a number: </p>
+<p>
+<% @games.each do |game| %>
 
-<p> The answer is: </p>
-
-<p> You were: </p>
+	<p>you guessed: 
+	<%= game.guess_count %>
+	</p>
+	the answer was:
+	<%= game.answer%>
+	
+<% end %>
+</p>
