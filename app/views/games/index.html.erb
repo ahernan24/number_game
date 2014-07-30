@@ -1,15 +1,4 @@
 <h1> Guessing Numbers! </h1>
-<h2> All Games </h2>
-<a href ="/games/new">New game</a></li>
 
-<p>
-<% @games.each do |game| %>
+<a href ="/games/new">Play new game</a></li>
 
-	<p>you guessed: 
-	<%= game.guess_count %>
-	</p>
-	the answer was:
-	<%= game.answer%>
-	
-<% end %>
-</p>
