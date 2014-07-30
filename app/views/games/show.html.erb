@@ -1,15 +1,19 @@
 <h1> Guessing Numbers! </h1>
-<a href ="/games">All Games</a></li>
-<a href ="/games/new">New Game</a></li>
 
-<p>
-	<strong>You guessed:</strong>
-	
+<p id="notice"><strong><%= flash[:notice] %></strong></p>
+
+..........
+
+<p> <strong>Play again?</strong> 
+
+
+<%= form_for @game do %>
+	<%= label_tag(:q, 'Guess between 1 and 10:') %>
+	<%= text_field_tag :guess %>
+  <%= submit_tag("Enter guess") %>
+<% end %>
 </p>
 
-<p>
-	<strong>The answer is:</strong>
-	<%= @game.answer %>
-</p>
+<p><strong>OR</strong></p>
 
-<a href ="/games/new">Play again?</a></li>
+<a href ="/games/new"><strong>Play new game?</strong></a></li>
