@@ -4,10 +4,9 @@
 <a href ="/games">Back</a></li>
 
 <p>
-<% form_for @game, games_path do |f| %>
-	<%= f.input :guess_count %>
-  <%= label_tag(:q, 'Guess between 1 and 10:') %>
-  <%= text_field_tag(:q) %>
+<%= form_for @game do %>
+	<%= label_tag(:q, 'Guess between 1 and 10:') %>
+	<%= text_field_tag :guess %>
   <%= submit_tag("Enter guess") %>
 <% end %>
 </p>
