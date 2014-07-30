@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140723224757) do
+ActiveRecord::Schema.define(version: 20140730232401) do
 
   create_table "games", force: true do |t|
     t.integer  "answer"
-    t.integer  "guess_count"
+    t.integer  "guess_count", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
