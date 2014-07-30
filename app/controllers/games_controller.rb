@@ -4,6 +4,7 @@ class GamesController < ApplicationController
   end
   
   def create
+   
     @game = Game.new(game_params)
   
     @game.save
@@ -20,7 +21,7 @@ class GamesController < ApplicationController
   
  private 
   def game_params
-    params.require(:game).permit(:answer, :guess_count)
+    params.require(:game).permit(:guess_count)
   end
   
 end
